@@ -15,18 +15,18 @@ $('#tombol').on('click', function(){
                 $.each(film, function (i, data) {
                     $('#daftar-film').append(`
                     <div class="col-md-4 my-2">
-                            <div class="card" style="width: 18rem;">
-                                  <img src=${data.Poster} class="card-img-top" 
-                                  alt="...">
-                                <div class="card-body">
-                                 <h5 class="card-title">${data.Title}</h5>
-                                    <p class="card-text">${data.Year}</p>
-                                  <a href="#" class="btn btn-detail" data-id="${data.imdbID}" data-bs-target="#exampleModal">Launch demo modal>Detail</a>
-                                 </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src=${data.Poster} class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${data.Title}</h5>
+                                <p class="card-text">${data.Year}</p>
+                                <a href="#" class="btn btn-detail" data-id="${data.imdbID}" data-bs-target="#exampleModal">Launch demo modal>Detail</a>
                             </div>
+                        </div>
                     </div>
                         `)
                 })
+            }else{
                 $('#daftar-film').html(`
                 <div class="col">
                     <h5 class="text-center text-danger">${hasil.error}</h5>

@@ -54,11 +54,3 @@ export async function getPostById(postId){
         throw error
 }
 }
-// fungsi untuk menambah postingan baru
-export async function addDoc(title, author, category, image, content){
-    try {
-        await addDoc(collection(db, 'post'), {
-            title, author, category, image, content
-        })
-    }
-}
